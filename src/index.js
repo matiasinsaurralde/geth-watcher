@@ -10,8 +10,8 @@ watcher.filter( ( err, block ) => {
   if( !err ) {
     console.log( 'Block #', block )
     var txs = watcher.getTransactions( block )
-    txs.forEach( (tx) {
-      console.log( 'TX', tx )
+    txs.forEach( (tx) => {
+      console.log( 'TX', tx );
     })
   }
 })
