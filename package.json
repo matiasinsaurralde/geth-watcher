@@ -2,7 +2,7 @@
   "name": "geth-watcher",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/geth-watcher.js",
   "scripts": {
     "prepublish": "npm run compile",
     "lint": "eslint src",
