@@ -30,7 +30,7 @@ describe( 'geth-watcher', function() {
 
   web3.personal.unlockAccount( account, accountPassword )
 
-  it( 'should send a tx & match our Redis key', function( done ) {
+  it( 'should send a tx & match our Redis key', (done) => {
     var txId = web3.eth.sendTransaction({from: account, to: '0x0000000000000000000000000000000000000000', value: 100 } )
     watcher.filter( (err,block) => {
       var txs = watcher.getTransactions( block )
@@ -56,7 +56,7 @@ describe( 'geth-watcher', function() {
     })
   })
 
-  it( 'should send a tx & ignore the tx (not a known address)', function( done ) {
+  it( 'should send a tx & ignore the tx (not a known address)', (done) => {
     var txId = web3.eth.sendTransaction({from: account, to: '0x0000000000000000000000000000000000000001', value: 100 } )
     watcher.filter( (err,block) => {
       var txs = watcher.getTransactions( block )
